@@ -3,3 +3,6 @@
 2026-05-12 11:25:52.737118 - Cliente registrado correctamente: Juan Perez
 2026-05-12 11:25:52.738124 - ERROR en Cliente: El nombre no puede estar vacio
 2026-05-12 11:25:52.738124 - ERROR en Cliente: El correo ingresado no es valido
+2026-05-12 18:20:30.090239 - Servicio creado correctamente: Sala VIP
+2026-05-12 18:20:30.091746 - ERROR en Servicio: El nombre del servicio no puede estar vacio
+2026-05-12 18:20:30.093255 - ERROR en Servicio: El precio del servicio debe ser mayor a cero
