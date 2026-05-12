@@ -1,2 +1,5 @@
 2026-05-11 22:49:17.742377 - Inicio del sistema
 2026-05-11 23:30:26.290127 - ERROR: Error de prueba en clientes
+2026-05-12 11:25:52.737118 - Cliente registrado correctamente: Juan Perez
+2026-05-12 11:25:52.738124 - ERROR en Cliente: El nombre no puede estar vacio
+2026-05-12 11:25:52.738124 - ERROR en Cliente: El correo ingresado no es valido
