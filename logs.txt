@@ -40,3 +40,46 @@
 2026-05-12 22:40:11.294748 - ERROR en Servicio: El nombre del servicio no puede estar vacio
 2026-05-12 22:40:11.295750 - Simulación 5 Finalizada
 
+2026-05-12 22:53:44.107800 - Simulacion 1 Iniciada
+2026-05-12 22:53:44.107800 - INFO: Cliente registrado correctamente
+2026-05-12 22:53:44.108803 - INFO: Cliente: Juan Perez | Correo: juan@gmail.com
+2026-05-12 22:53:44.109975 - Simulación 1 Finalizada
+
+2026-05-12 22:53:44.109975 - Simulacion 2 Iniciada
+2026-05-12 22:53:44.110967 - ERROR: El correo ingresado no es valido
+2026-05-12 22:53:44.111975 - Simulación 2 Finalizada
+
+2026-05-12 22:53:44.112975 - Simulacion 3 Iniciada
+2026-05-12 22:53:44.113976 - ERROR en Servicio: El precio del servicio debe ser numerico
+2026-05-12 22:53:44.113976 - Simulación 3 Finalizada
+
+2026-05-12 22:53:44.116518 - Simulacion 4 Iniciada
+2026-05-12 22:53:44.116518 - INFO: Servicio creado correctamente
+2026-05-12 22:53:44.117501 - INFO: Servicio de alquiler de equipo: Computador Gamer | Precio por dia: 80 | Costo Total: 240
+2026-05-12 22:53:44.118558 - Simulación 4 Finalizada
+
+2026-05-12 22:53:44.119559 - Simulacion 5 Iniciada
+2026-05-12 22:53:44.120559 - ERROR en Servicio: El nombre del servicio no puede estar vacio
+2026-05-12 22:53:44.121562 - Simulación 5 Finalizada
+
+2026-05-12 22:53:44.122563 - Simulacion 6 Iniciada
+2026-05-12 22:53:44.122563 - ERROR en Reserva: La duracion debe ser numerica
+2026-05-12 22:53:44.123552 - Simulación 6 Finalizada
+
+2026-05-12 22:53:44.123552 - Simulacion 7 Iniciada
+2026-05-12 22:53:44.126099 - ERROR en Reserva: No se puede confirmar una reserva cancelada
+2026-05-12 22:53:44.128102 - Simulación 7 Finalizada
+
+2026-05-12 22:53:44.129514 - Simulacion 8 Iniciada
+2026-05-12 22:53:44.130514 - ERROR en Cliente: El nombre solo debe contener letras
+2026-05-12 22:53:44.131518 - Simulación 8 Finalizada
+
+2026-05-12 22:53:44.132510 - Simulacion 9 Iniciada
+2026-05-12 22:53:44.134522 - INFO: Reserva realizada correctamente
+2026-05-12 22:53:44.135517 - INFO: Cliente: Sofia Martinez | Servicio: Asesoria UX | Estado: Confirmada
+2026-05-12 22:53:44.136523 - Simulación 9 Finalizada
+
+2026-05-12 22:53:44.137511 - Simulacion 10 Iniciada
+2026-05-12 22:53:44.139026 - ERROR en Servicio: El precio del servicio debe ser mayor a cero
+2026-05-12 22:53:44.139026 - Simulación 10 Finalizada
+
