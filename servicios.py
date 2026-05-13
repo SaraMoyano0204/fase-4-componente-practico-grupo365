@@ -10,16 +10,29 @@ class Servicio(ABC):
     # Se crea el constructor de la clase
     def __init__(self, nombre, precio):
 
+         # Se valida que el nombre sea tipo texto
+        if not isinstance(nombre, str):
+            # Se lanza una excepcion si no es texto
+            raise ServicioError("El nombre del servicio debe ser de tipo texto")
+
         # Se valida que el nombre no este vacio
         if nombre.strip() == "":
-
-            # Se lanza la excepcion si el nombre esta vacio
+            # Se lanza una excepcion si esta vacio
             raise ServicioError("El nombre del servicio no puede estar vacio")
+
+         # Se valida que el nombre tenga minimo 3 caracteres
+        if len(nombre.strip()) < 3:
+            # Se lanza una excepcion si es muy corto
+            raise ServicioError("El nombre del servicio debe tener minimo 3 caracteres")
+
+         # Se valida que el precio sea numerico
+        if not isinstance(precio, (int, float)):
+            # Se lanza una excepcion si no es numerico
+            raise ServicioError("El precio del servicio debe ser numerico")
 
         # Se valida que el precio sea mayor a cero
         if precio <= 0:
-
-            # Se lanza la excepcion si el precio no es valido
+            # Se lanza una excepcion si no es valido
             raise ServicioError("El precio del servicio debe ser mayor a cero")
 
         # Se guarda el nombre como atributo privado
@@ -63,6 +76,17 @@ class ReservaSala(Servicio):
 
     # Se crea metodo para calcular el costo total
     def calcular_costo(self, horas=1):
+
+        # Se valida que las horas sean numericas
+        if not isinstance(horas, (int, float)):
+            # Se lanza una excepcion si no son numericas
+            raise ServicioError("Las horas deben ser numericas")
+
+        # Se valida que las horas sean mayores a cero
+        if horas <= 0:
+            # Se lanza unaexcepcion si no son validas
+            raise ServicioError("Las horas deben ser mayores a cero")
+
         # Se retorna el precio multiplicado por las horas
         return self.get_precio() * horas
 

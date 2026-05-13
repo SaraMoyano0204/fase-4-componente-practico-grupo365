@@ -6,3 +6,7 @@
 2026-05-12 18:20:30.090239 - Servicio creado correctamente: Sala VIP
 2026-05-12 18:20:30.091746 - ERROR en Servicio: El nombre del servicio no puede estar vacio
 2026-05-12 18:20:30.093255 - ERROR en Servicio: El precio del servicio debe ser mayor a cero
+2026-05-12 19:35:00.357503 - Cliente registrado correctamente: Juan Perez
+2026-05-12 19:35:00.360574 - ERROR en Cliente: El correo ingresado no es valido
+2026-05-12 19:35:00.361576 - ERROR en Servicio: El precio del servicio debe ser numerico
+2026-05-12 19:35:00.362578 - ERROR en Servicio: Las horas deben ser numericas
