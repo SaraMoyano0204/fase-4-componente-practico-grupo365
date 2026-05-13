@@ -64,3 +64,30 @@ class Reserva:
     def get_estado(self):
         # Se retorna el estado
         return self.__estado
+    
+    # Se crea metodo para confirmar la reserva
+    def confirmar_reserva(self):
+
+        # Se valida si la reserva ya fue confirmada
+        if self.__estado == "Confirmada":
+            # Se lanza una excepcion si ya esta confirmada
+            raise ReservaError("La reserva ya fue confirmada")
+
+        # Se valida si la reserva ya fue cancelada
+        if self.__estado == "Cancelada":
+            # Se lanza una excepcion si ya fue cancelada
+            raise ReservaError("No se puede confirmar una reserva cancelada")
+
+        # Se cambia el estado de la reserva
+        self.__estado = "Confirmada"
+
+    # Se crea metodo para cancelar la reserva
+    def cancelar_reserva(self):
+
+        # Se valida si la reserva ya fue cancelada
+        if self.__estado == "Cancelada":
+            # Se lanza una excepcion si ya fue cancelada
+            raise ReservaError("La reserva ya fue cancelada")
+
+        # Se cambia el estado de la reserva
+        self.__estado = "Cancelada"

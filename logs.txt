@@ -16,3 +16,5 @@
 2026-05-12 19:52:30.260855 - ERROR en Servicio: El nombre del servicio no puede estar vacio
 2026-05-12 20:07:32.823542 - Reserva creada correctamente para: Carlos Ruiz
 2026-05-12 20:07:32.824550 - ERROR en Reserva: La duracion debe ser numerica
+2026-05-12 20:38:39.594059 - Reserva confirmada correctamente para: Carlos Ruiz
+2026-05-12 20:38:39.595414 - ERROR en Reserva: No se puede confirmar una reserva cancelada

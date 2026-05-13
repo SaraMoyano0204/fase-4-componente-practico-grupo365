@@ -15,7 +15,7 @@ from logger import registrar_log
 
 # Se hacen simulaciones para probar el correcto funcionamiento del sistema
 
-# Se hace una prueba para una reserva valida
+# Se hace una prueba para confirmar una reserva valida
 try:
 
     # Se crea un cliente valido
@@ -27,28 +27,28 @@ try:
     # Se crea la reserva
     reserva1 = Reserva(cliente1, servicio1, 3)
 
+    # Se confirma la reserva
+    reserva1.confirmar_reserva()
+
     # Se obtiene el nombre del cliente
     nombre_cliente = reserva1.get_cliente().get_nombre()
 
-    # Se obtiene el nombre del servicio
-    nombre_servicio = reserva1.get_servicio().get_nombre()
-
-    # Se muestra la informacion de la reserva
-    print(f"Reserva creada para: {nombre_cliente}")
-    print(f"Servicio reservado: {nombre_servicio}")
-    print(f"Estado de la reserva: {reserva1.get_estado()}")
+    # Se muestra el estado de la reserva
+    print(f"Reserva confirmada para: {nombre_cliente}")
+    print(f"Estado actual: {reserva1.get_estado()}")
 
     # Se guarda el evento exitoso en los logs
-    registrar_log(f"Reserva creada correctamente para: {nombre_cliente}")
+    registrar_log(f"Reserva confirmada correctamente para: {nombre_cliente}")
 
 # Si ocurre un error se captura
 except ReservaError as error:
+
     # Se guarda el error en los logs
     registrar_log(f"ERROR en Reserva: {error}")
 
 print() # Se hace un salto de linea
 
-# Se hace una prueba para una reserva invalida
+# Se hace una prueba para confirmar una reserva ya cancelada
 try:
 
     # Se crea un cliente valido
@@ -57,17 +57,24 @@ try:
     # Se crea un servicio valido
     servicio2 = ReservaSala("Sala Premium", 250)
 
-    # Se crea una reserva con duracion invalida
-    reserva2 = Reserva(cliente2, servicio2, "tres")
+    # Se crea la reserva
+    reserva2 = Reserva(cliente2, servicio2, 2)
+
+    # Se cancela la reserva
+    reserva2.cancelar_reserva()
+
+    # Se intenta confirmar nuevamente la reserva
+    reserva2.confirmar_reserva()
 
     # Se obtiene el nombre del cliente
     nombre_cliente = reserva2.get_cliente().get_nombre()
 
-    # Se muestra la informacion de la reserva
-    print(f"Reserva creada para: {nombre_cliente}")
+    # Se muestra el estado de la reserva
+    print(f"Reserva confirmada para: {nombre_cliente}")
+    print(f"Estado actual: {reserva2.get_estado()}")
 
     # Se guarda el evento exitoso en los logs
-    registrar_log(f"Reserva creada correctamente para: {nombre_cliente}")
+    registrar_log(f"Reserva confirmada correctamente para: {nombre_cliente}")
 
 # Si ocurre un error se captura
 except ReservaError as error:
