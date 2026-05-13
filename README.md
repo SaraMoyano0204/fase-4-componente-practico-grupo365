@@ -1,13 +1,19 @@
-# Software FJ
+# Software FJ - Sistema de Gestión de Clientes, Servicios y Reservas
 
-Sistema orientado a objetos para gestionar clientes, servicios y reservas.
+El sistema permite gestionar clientes, servicios y reservas para una empresa llamada Software FJ, utilizando programación orientada a objetos y manejo avanzado de excepciones en Python.
 
-## Objetivos
+---
 
-- Aplicar programación orientada a objetos
-- Implementar manejo avanzado de excepciones
-- Registrar eventos en logs
-- Simular operaciones válidas e inválidas
+## Objetivos del proyecto
+
+- Aplicar programación orientada a objetos.
+- Implementar clases abstractas y herencia.
+- Utilizar encapsulación y polimorfismo.
+- Implementar manejo robusto de excepciones.
+- Registrar eventos y errores en archivos logs.
+- Simular operaciones válidas e inválidas sin detener el sistema.
+
+---
 
 ## Estructura
 
@@ -18,6 +24,17 @@ Sistema orientado a objetos para gestionar clientes, servicios y reservas.
 - logger.py
 - logs.txt
 - main.py
+- README.md
+
+---
+
+## Tecnologías utilizadas
+
+- Python 3
+- Git
+- GitHub
+
+---
 
 ## Integrantes
 
