@@ -93,7 +93,7 @@ class ReservaSala(Servicio):
     # Se crea metodo para mostrar la descripcion del servicio
     def descripcion(self):
         # Se retorna la descripcion del servicio
-        return f"Servicio de reserva de sala: {self.get_nombre()}\nPrecio por hora: {self.get_precio()}"
+        return f"Servicio de reserva de sala: {self.get_nombre()} | Precio por hora: {self.get_precio()}"
     
     # Se crea una clase hija para manejar alquiler de equipos
 class AlquilerEquipo(Servicio):
@@ -123,7 +123,7 @@ class AlquilerEquipo(Servicio):
     # Se crea metodo para mostrar la descripcion del servicio
     def descripcion(self):
         # Se retorna la descripcion del servicio
-        return f"Servicio de alquiler de equipo: {self.get_nombre()}\nPrecio por dia: {self.get_precio()}"
+        return f"Servicio de alquiler de equipo: {self.get_nombre()} | Precio por dia: {self.get_precio()}"
 
 
 # Se crea una clase hija para manejar asesorias
@@ -172,4 +172,4 @@ class Asesoria(Servicio):
     # Se crea metodo para mostrar la descripcion del servicio
     def descripcion(self):
         # Se retorna la descripcion del servicio
-        return f"Servicio de asesoria: {self.get_nombre()}\nPrecio por hora: {self.get_precio()}"
+        return f"Servicio de asesoria: {self.get_nombre()} | Precio por hora: {self.get_precio()}"

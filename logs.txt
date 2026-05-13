@@ -18,3 +18,25 @@
 2026-05-12 20:07:32.824550 - ERROR en Reserva: La duracion debe ser numerica
 2026-05-12 20:38:39.594059 - Reserva confirmada correctamente para: Carlos Ruiz
 2026-05-12 20:38:39.595414 - ERROR en Reserva: No se puede confirmar una reserva cancelada
+2026-05-12 22:40:11.284152 - Simulacion 1 Iniciada
+2026-05-12 22:40:11.285154 - INFO: Cliente registrado correctamente
+2026-05-12 22:40:11.285154 - INFO: Cliente: Juan Perez | Correo: juan@gmail.com
+2026-05-12 22:40:11.286157 - Simulación 1 Finalizada
+
+2026-05-12 22:40:11.286157 - Simulacion 2 Iniciada
+2026-05-12 22:40:11.287158 - ERROR: El correo ingresado no es valido
+2026-05-12 22:40:11.288157 - Simulación 2 Finalizada
+
+2026-05-12 22:40:11.288157 - Simulacion 3 Iniciada
+2026-05-12 22:40:11.289739 - ERROR en Servicio: El precio del servicio debe ser numerico
+2026-05-12 22:40:11.289739 - Simulación 3 Finalizada
+
+2026-05-12 22:40:11.290756 - Simulacion 4 Iniciada
+2026-05-12 22:40:11.291759 - INFO: Servicio creado correctamente
+2026-05-12 22:40:11.292755 - INFO: Servicio de alquiler de equipo: Computador Gamer | Precio por dia: 80 | Costo Total: 240
+2026-05-12 22:40:11.293747 - Simulación 4 Finalizada
+
+2026-05-12 22:40:11.294748 - Simulacion 5 Iniciada
+2026-05-12 22:40:11.294748 - ERROR en Servicio: El nombre del servicio no puede estar vacio
+2026-05-12 22:40:11.295750 - Simulación 5 Finalizada
+

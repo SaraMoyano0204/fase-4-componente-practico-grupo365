@@ -99,4 +99,5 @@ class Cliente:
     def mostrar_informacion(self):
         
         # Se retorna la información
-        return f"Cliente: {self.__nombre} \nCorreo: {self.__correo}"
+        return f"Cliente: {self.__nombre} | Correo: {self.__correo}"
+    
