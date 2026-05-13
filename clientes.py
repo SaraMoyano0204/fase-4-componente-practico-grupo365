@@ -46,6 +46,19 @@ class Cliente:
         # Se separa el correo usando el simbolo @
         partes_correo = correo.split("@")
 
+        # Se guarda la parte del usuario
+        usuario = partes_correo[0]
+
+        # Se valida que el usuario no este vacio
+        if usuario.strip() == "":
+            # Se lanza una excepcion si el usuario esta vacio
+            raise ClienteError("El correo debe tener un usuario antes del @")
+
+        # Se valida que el usuario tenga minimo 3 caracteres
+        if len(usuario.strip()) < 3:
+            # Se lanza una excepcion si el usuario es muy corto
+            raise ClienteError("El usuario del correo debe tener minimo 3 caracteres")
+
         # Se valida que el correo tenga usuario y dominio
         if len(partes_correo) != 2:
             # Se lanza una excepcion si no tiene formato valido
