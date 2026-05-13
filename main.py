@@ -1,118 +1,76 @@
+# Se importa la clase Cliente
+from clientes import Cliente
+
 # Se importa el servicio de reserva de sala
 from servicios import ReservaSala
 
-# Se importa el servicio de alquiler de equipos
-from servicios import AlquilerEquipo
+# Se importa la clase Reserva
+from reservas import Reserva
 
-# Se importa el servicio de asesorias
-from servicios import Asesoria
-
-# Se importan las excepciones personalizadas
-from excepciones import ServicioError
+# Se importa la excepcion personalizada
+from excepciones import ReservaError
 
 # Se importa la funcion para guardar logs
 from logger import registrar_log
 
 # Se hacen simulaciones para probar el correcto funcionamiento del sistema
 
-# Se hace una prueba para un servicio de alquiler valido
+# Se hace una prueba para una reserva valida
 try:
 
-    # Se crea el servicio de alquiler
-    servicio3 = AlquilerEquipo("Computador Gamer", 80)
+    # Se crea un cliente valido
+    cliente1 = Cliente("Carlos Ruiz", "carlos@gmail.com")
+
+    # Se crea un servicio valido
+    servicio1 = ReservaSala("Sala Ejecutiva", 200)
+
+    # Se crea la reserva
+    reserva1 = Reserva(cliente1, servicio1, 3)
+
+    # Se obtiene el nombre del cliente
+    nombre_cliente = reserva1.get_cliente().get_nombre()
 
     # Se obtiene el nombre del servicio
-    nombre = servicio3.get_nombre()
+    nombre_servicio = reserva1.get_servicio().get_nombre()
 
-    # Se calcula el costo total
-    costo = servicio3.calcular_costo(3)
-
-    # Se muestra la descripcion junto al costo total
-    print(f"{servicio3.descripcion()}\nCosto Total: {costo}")
+    # Se muestra la informacion de la reserva
+    print(f"Reserva creada para: {nombre_cliente}")
+    print(f"Servicio reservado: {nombre_servicio}")
+    print(f"Estado de la reserva: {reserva1.get_estado()}")
 
     # Se guarda el evento exitoso en los logs
-    registrar_log(f"Servicio creado correctamente: {nombre}")
+    registrar_log(f"Reserva creada correctamente para: {nombre_cliente}")
 
 # Si ocurre un error se captura
-except ServicioError as error:
-
+except ReservaError as error:
     # Se guarda el error en los logs
-    registrar_log(f"ERROR en Servicio: {error}")
+    registrar_log(f"ERROR en Reserva: {error}")
 
 print() # Se hace un salto de linea
 
-# Se hace una prueba para un servicio de alquiler invalido
+# Se hace una prueba para una reserva invalida
 try:
 
-    # Se crea un servicio con precio invalido
-    servicio4 = AlquilerEquipo("Proyector", "cincuenta")
+    # Se crea un cliente valido
+    cliente2 = Cliente("Laura Gomez", "laura@gmail.com")
 
-    # Se obtiene el nombre del servicio
-    nombre = servicio4.get_nombre()
+    # Se crea un servicio valido
+    servicio2 = ReservaSala("Sala Premium", 250)
 
-    # Se calcula el costo total
-    costo = servicio4.calcular_costo(2)
+    # Se crea una reserva con duracion invalida
+    reserva2 = Reserva(cliente2, servicio2, "tres")
 
-    # Se muestra la descripcion junto al costo total
-    print(f"{servicio4.descripcion()}\nCosto Total: {costo}")
+    # Se obtiene el nombre del cliente
+    nombre_cliente = reserva2.get_cliente().get_nombre()
 
-    # Se guarda el evento exitoso en los logs
-    registrar_log(f"Servicio creado correctamente: {nombre}")
-
-# Si ocurre un error se captura
-except ServicioError as error:
-
-    # Se guarda el error en los logs
-    registrar_log(f"ERROR en Servicio: {error}")
-
-print() # Se hace un salto de linea
-
-# Se hace una prueba para una asesoria valida
-try:
-
-    # Se crea el servicio de asesoria
-    servicio5 = Asesoria("Asesoria de Diseño", 150)
-
-    # Se obtiene el nombre del servicio
-    nombre = servicio5.get_nombre()
-
-    # Se calcula el costo total
-    costo = servicio5.calcular_costo(2, 50)
-
-    # Se muestra la descripcion junto al costo total
-    print(f"{servicio5.descripcion()}\nCosto Total: {costo}")
+    # Se muestra la informacion de la reserva
+    print(f"Reserva creada para: {nombre_cliente}")
 
     # Se guarda el evento exitoso en los logs
-    registrar_log(f"Servicio creado correctamente: {nombre}")
+    registrar_log(f"Reserva creada correctamente para: {nombre_cliente}")
 
 # Si ocurre un error se captura
-except ServicioError as error:
+except ReservaError as error:
 
     # Se guarda el error en los logs
-    registrar_log(f"ERROR en Servicio: {error}")
-
-print() # Se hace un salto de linea
-
-# Se hace una prueba para una asesoria con nombre vacio
-try:
-
-    # Se crea una asesoria con nombre invalido
-    servicio6 = Asesoria("", 120)
-
-    # Se obtiene el nombre del servicio
-    nombre = servicio6.get_nombre()
-
-    # Se calcula el costo total
-    costo = servicio6.calcular_costo(2, 20)
-
-    # Se muestra la descripcion junto al costo total
-    print(f"{servicio6.descripcion()}\nCosto Total: {costo}")
-
-    # Se guarda el evento exitoso en los logs
-    registrar_log(f"Servicio creado correctamente: {nombre}")
-
-# Si ocurre un error se captura
-except ServicioError as error:
-
-    # Se guarda el error en los logs
-    registrar_log(f"ERROR en Servicio: {error}")
+    registrar_log(f"ERROR en Reserva: {error}")

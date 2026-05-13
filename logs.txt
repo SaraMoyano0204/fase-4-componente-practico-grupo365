@@ -14,3 +14,5 @@
 2026-05-12 19:52:30.258690 - ERROR en Servicio: El precio del servicio debe ser numerico
 2026-05-12 19:52:30.259854 - Servicio creado correctamente: Asesoria de Diseño
 2026-05-12 19:52:30.260855 - ERROR en Servicio: El nombre del servicio no puede estar vacio
+2026-05-12 20:07:32.823542 - Reserva creada correctamente para: Carlos Ruiz
+2026-05-12 20:07:32.824550 - ERROR en Reserva: La duracion debe ser numerica
